@@ -366,6 +366,7 @@
 	<script id="sieve">
 window.onload = function() {  
     var c = document.getElementById("canvas"), 
+		d = (1.20016607e22).toFixed(2),
         ctx = c.getContext("2d"), 
         minPolySize = 1, 
         maxPolySize = 9, 
@@ -377,8 +378,9 @@ window.onload = function() {
         hexValues = {A: "0000CC", B: "550000", C: "550055", D: "555500", E: "555555"}, 
         resultTextArea = document.getElementById("result");
         c.width = 125;
-        c.height = 125;	  
-	  const seed = (1.20016607e22).toFixed(2);
+        c.height = 125;
+
+	  const seed = d;
 
    function generateSieve(n) {
   var sieve = new Array(n).fill(true);
